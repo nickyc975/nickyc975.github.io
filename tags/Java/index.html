@@ -5,12 +5,12 @@
   
 
   
-  <title>Talk is cheap. Show me the code.</title>
+  <title>Tag: Java | Talk is cheap. Show me the code.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="nickyc975的个人博客">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Talk is cheap. Show me the code.">
-<meta property="og:url" content="https://nickyc975.github.io/index.html">
+<meta property="og:url" content="https://nickyc975.github.io/tags/Java/index.html">
 <meta property="og:site_name" content="Talk is cheap. Show me the code.">
 <meta property="og:description" content="nickyc975的个人博客">
 <meta property="og:locale" content="zh-CN">
@@ -69,97 +69,36 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-赋值、浅拷贝与深拷贝" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/03/04/赋值、浅拷贝与深拷贝/" class="article-date">
-  <time datetime="2018-03-04T15:57:20.000Z" itemprop="datePublished">2018-03-04</time>
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2018/03/04/赋值、浅拷贝与深拷贝/" class="archive-article-date">
+  <time datetime="2018-03-04T15:57:20.000Z" itemprop="datePublished">3月 4</time>
 </a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+      
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/04/赋值、浅拷贝与深拷贝/">赋值、浅拷贝与深拷贝</a>
+      <a class="archive-article-title" href="/2018/03/04/赋值、浅拷贝与深拷贝/">赋值、浅拷贝与深拷贝</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>前几天写Java时遇到一个问题，在我的代码中有这样一段：</p>
-<pre><code>Set&lt;Person&gt; Temp = new HashSet&lt;Person&gt;();
-Set&lt;Person&gt; RemainedPerson = new HashSet&lt;Person&gt;();
-RemainedPerson.add(vertexA); // vertexA is an instance of Person class.
-
-while (!RemainedPerson.isEmpty()) {
-    for (Person person: RemainedPerson) {
-        // Do something that will change Temp.
-    }
-    RemainedPerson = Temp;
-    Temp.clear();
-}
-</code></pre><p>我本来是想用    Temp    临时保存一些    Person    对象，当    for    循环结束后再将    Temp    中保存的对象拷贝到    RemainedPerson    中， 然后将    Temp    清空进行下一次    while    循环。但是实际上明明    Temp    里被加入了对象却依然会提前退出循环。我意识到可能是    Temp.clear()    将    Temp    清空的同时也将    RemainedPerson    清空了。一试果然如此！</p>
-<h3 id="Java中的赋值、浅拷贝与深拷贝"><a href="#Java中的赋值、浅拷贝与深拷贝" class="headerlink" title="Java中的赋值、浅拷贝与深拷贝"></a>Java中的赋值、浅拷贝与深拷贝</h3><p>根据以上经历来看，赋值后    Temp    和    RemainedPerson    应该是同一个对象，对一个进行操作另一个也会随之改变。</p>
-<p><em>未完待续</em></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://nickyc975.github.io/2018/03/04/赋值、浅拷贝与深拷贝/" data-id="cjecz9tfy00010sm4ngjrowan" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
-
-    </footer>
+    </header>
   </div>
-  
 </article>
-
-
   
-    <article id="post-第一篇博客" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/02/27/第一篇博客/" class="article-date">
-  <time datetime="2018-02-27T14:47:20.000Z" itemprop="datePublished">2018-02-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/27/第一篇博客/">第一篇博客</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="第一篇博客"><a href="#第一篇博客" class="headerlink" title="第一篇博客"></a>第一篇博客</h1><p>这是我的第一篇个人博客，用于测试Hexo。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://nickyc975.github.io/2018/02/27/第一篇博客/" data-id="cjecz9tfu00000sm469fdkh2d" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/闲谈/">闲谈</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
+    </div></section>
   
 
 
